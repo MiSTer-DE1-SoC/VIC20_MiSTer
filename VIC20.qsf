@@ -15,16 +15,42 @@ set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Standard Edition"
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
-set_global_assignment -name SAVE_DISK_SPACE OFF
 set_global_assignment -name SMART_RECOMPILE ON
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
-set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
 
 source sys/sys.tcl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_DE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_D[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_VS
+set_location_assignment FRACTIONALPLL_X89_Y1_N0 -to "emu:emu|pll:pll|pll_0002:pll_inst|altera_pll:altera_pll_i|altera_cyclonev_pll:cyclonev_pll|altera_cyclonev_pll_base:fpll_0|fpll"
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CONVST
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SCK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDI
@@ -95,21 +121,14 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK3_50
 set_location_assignment PIN_AF14 -to FPGA_CLK1_50
 set_location_assignment PIN_AA16 -to FPGA_CLK2_50
 set_location_assignment PIN_Y26 -to FPGA_CLK3_50
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2S
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_LRCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_MCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_SCLK
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_*
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_D[*]
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_DE
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_HS
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_VS
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_CLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
-set_location_assignment PIN_Y27 -to KEY[0]
-set_location_assignment PIN_AB28 -to KEY[1]
+set_location_assignment PIN_AC12 -to KEY[0]
+set_location_assignment PIN_AF9 -to KEY[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
@@ -118,7 +137,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
-set_location_assignment PIN_AD24 -to LED[0]
+set_location_assignment PIN_V18 -to LED[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
@@ -131,62 +150,62 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to SDIO_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SDIO_*
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SDIO_DAT[*]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SDIO_CMD
-set_location_assignment PIN_AK29 -to VGA_R[0]
-set_location_assignment PIN_AK28 -to VGA_R[1]
-set_location_assignment PIN_AK27 -to VGA_R[2]
-set_location_assignment PIN_AJ27 -to VGA_R[3]
-set_location_assignment PIN_AH27 -to VGA_R[4]
-set_location_assignment PIN_AF26 -to VGA_R[5]
-set_location_assignment PIN_AG26 -to VGA_R[6]
-set_location_assignment PIN_AJ26 -to VGA_R[7]
-set_location_assignment PIN_AK26 -to VGA_G[0]
-set_location_assignment PIN_AJ25 -to VGA_G[1]
-set_location_assignment PIN_AH25 -to VGA_G[2]
-set_location_assignment PIN_AK24 -to VGA_G[3]
-set_location_assignment PIN_AJ24 -to VGA_G[4]
-set_location_assignment PIN_AH24 -to VGA_G[5]
-set_location_assignment PIN_AK23 -to VGA_G[6]
-set_location_assignment PIN_AH23 -to VGA_G[7]
-set_location_assignment PIN_AJ21 -to VGA_B[0]
-set_location_assignment PIN_AJ20 -to VGA_B[1]
-set_location_assignment PIN_AH20 -to VGA_B[2]
-set_location_assignment PIN_AJ19 -to VGA_B[3]
-set_location_assignment PIN_AH19 -to VGA_B[4]
-set_location_assignment PIN_AJ17 -to VGA_B[5]
-set_location_assignment PIN_AJ16 -to VGA_B[6]
-set_location_assignment PIN_AK16 -to VGA_B[7]
-set_location_assignment PIN_AK19 -to VGA_HS
-set_location_assignment PIN_AK18 -to VGA_VS
-set_location_assignment PIN_AJ22 -to VGA_SYNC_N
-set_location_assignment PIN_AK22 -to VGA_BLANK_N
-set_location_assignment PIN_AK21 -to VGA_CLK
+set_location_assignment PIN_A13 -to VGA_R[0]
+set_location_assignment PIN_C13 -to VGA_R[1]
+set_location_assignment PIN_E13 -to VGA_R[2]
+set_location_assignment PIN_B12 -to VGA_R[3]
+set_location_assignment PIN_C12 -to VGA_R[4]
+set_location_assignment PIN_D12 -to VGA_R[5]
+set_location_assignment PIN_E12 -to VGA_R[6]
+set_location_assignment PIN_F13 -to VGA_R[7]
+set_location_assignment PIN_J9 -to VGA_G[0]
+set_location_assignment PIN_J10 -to VGA_G[1]
+set_location_assignment PIN_H12 -to VGA_G[2]
+set_location_assignment PIN_G10 -to VGA_G[3]
+set_location_assignment PIN_G11 -to VGA_G[4]
+set_location_assignment PIN_G12 -to VGA_G[5]
+set_location_assignment PIN_F11 -to VGA_G[6]
+set_location_assignment PIN_E11 -to VGA_G[7]
+set_location_assignment PIN_B13 -to VGA_B[0]
+set_location_assignment PIN_G13 -to VGA_B[1]
+set_location_assignment PIN_H13 -to VGA_B[2]
+set_location_assignment PIN_F14 -to VGA_B[3]
+set_location_assignment PIN_H14 -to VGA_B[4]
+set_location_assignment PIN_F15 -to VGA_B[5]
+set_location_assignment PIN_G15 -to VGA_B[6]
+set_location_assignment PIN_J14 -to VGA_B[7]
+set_location_assignment PIN_B11 -to VGA_HS
+set_location_assignment PIN_D11 -to VGA_VS
+set_location_assignment PIN_C10 -to VGA_SYNC_N
+set_location_assignment PIN_F10 -to VGA_BLANK_N
+set_location_assignment PIN_A11 -to VGA_CLK
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to VGA_EN
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_*
 set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to VGA_*
-set_location_assignment PIN_AJ29 -to AUD_ADCDAT
-set_location_assignment PIN_AH29 -to AUD_ADCLRCK
-set_location_assignment PIN_AF30 -to AUD_BCLK
-set_location_assignment PIN_AF29 -to AUD_DACDAT
-set_location_assignment PIN_AG30 -to AUD_DACLRCK
-set_location_assignment PIN_AH30 -to AUD_XCK
-set_location_assignment PIN_Y24 -to I2C_SCLK
-set_location_assignment PIN_Y23 -to I2C_SDAT
+set_location_assignment PIN_K7 -to AUD_ADCDAT
+set_location_assignment PIN_K8 -to AUD_ADCLRCK
+set_location_assignment PIN_H7 -to AUD_BCLK
+set_location_assignment PIN_J7 -to AUD_DACDAT
+set_location_assignment PIN_H8 -to AUD_DACLRCK
+set_location_assignment PIN_G7 -to AUD_XCK
+set_location_assignment PIN_J12 -to I2C_SCLK
+set_location_assignment PIN_K12 -to I2C_SDAT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to I2C_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUDIO_*
 set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to AUDIO_*
-set_location_assignment PIN_AC23 -to LED_USER
-set_location_assignment PIN_AA24 -to LED_HDD
-set_location_assignment PIN_AB23 -to LED_POWER
-set_location_assignment PIN_AK4 -to BTN_USER
-set_location_assignment PIN_AA14 -to BTN_OSD
-set_location_assignment PIN_AA15 -to BTN_RESET
+set_location_assignment PIN_V17 -to LED_USER
+set_location_assignment PIN_V16 -to LED_HDD
+set_location_assignment PIN_W16 -to LED_POWER
+set_location_assignment PIN_AA15 -to BTN_USER
+set_location_assignment PIN_W15 -to BTN_OSD
+set_location_assignment PIN_Y16 -to BTN_RESET
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BTN_*
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_*
 source files.qip
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:sys/build_id.tcl"
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
